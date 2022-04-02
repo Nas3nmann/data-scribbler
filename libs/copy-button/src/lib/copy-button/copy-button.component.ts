@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
+import { WINDOW } from '@jdrks/shared';
 
 @Component({
   selector: 'jdrks-copy-button',
@@ -9,9 +10,11 @@ export class CopyButtonComponent {
   @Input()
   data: unknown;
 
+  constructor(@Inject(WINDOW) private window: Window) {}
+
   copyData() {
-    window.prompt(
-      'Copy to clipboard: Ctrl+C, Enter',
+    this.window.prompt(
+      'Copy your data to clipboard with Ctrl+C',
       JSON.stringify(this.data)
     );
   }

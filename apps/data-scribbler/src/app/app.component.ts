@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { DataPoint } from '@jdrks/shared';
 
 @Component({
   selector: 'jdrks-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'data-scribbler';
+  @HostBinding('class.dark')
+  darkModeEnabled = false;
+
+  minDataPointDistance = 0.1;
+  dataPoints: DataPoint[] = [];
 }

@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@jdrks/author-reference": ["libs/author-reference/src/index.ts"],
+      "@jdrks/copy-button": ["libs/copy-button/src/index.ts"],
+      "@jdrks/dark-mode": ["libs/dark-mode/src/index.ts"],
+      "@jdrks/distance-slider": ["libs/distance-slider/src/index.ts"],
+      "@jdrks/logo": ["libs/logo/src/index.ts"],
+      "@jdrks/scribbling": ["libs/scribbling/src/index.ts"],
+      "@jdrks/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

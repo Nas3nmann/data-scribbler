@@ -1,0 +1,16 @@
+<div
+  class="bg-primary w-16 h-16 m-4 p-2 rounded-full flex align-middle justify-center shadow"
+>
+  <img
+    *ngIf="darkModeEnabled"
+    (click)="toggleDarkMode(false)"
+    class="w-12 h-12"
+    src="assets/sun.svg"
+  />
+  <img
+    *ngIf="!darkModeEnabled"
+    (click)="toggleDarkMode(true)"
+    class="w-12 h-12"
+    src="assets/moon.svg"
+  />
+</div>

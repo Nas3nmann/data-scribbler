@@ -1,6 +1,81 @@
 {
   "version": 1,
   "projects": {
+    "author-reference": {
+      "projectType": "library",
+      "root": "libs/author-reference",
+      "sourceRoot": "libs/author-reference/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/author-reference"],
+          "options": {
+            "jestConfig": "libs/author-reference/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/author-reference/src/**/*.ts",
+              "libs/author-reference/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "copy-button": {
+      "projectType": "library",
+      "root": "libs/copy-button",
+      "sourceRoot": "libs/copy-button/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/copy-button"],
+          "options": {
+            "jestConfig": "libs/copy-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/copy-button/src/**/*.ts",
+              "libs/copy-button/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "dark-mode": {
+      "projectType": "library",
+      "root": "libs/dark-mode",
+      "sourceRoot": "libs/dark-mode/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/dark-mode"],
+          "options": {
+            "jestConfig": "libs/dark-mode/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/dark-mode/src/**/*.ts",
+              "libs/dark-mode/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "data-scribbler": {
       "projectType": "application",
       "root": "apps/data-scribbler",
@@ -19,7 +94,22 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/data-scribbler/src/favicon.ico",
-              "apps/data-scribbler/src/assets"
+              "apps/data-scribbler/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/distance-slider/src/assets/",
+                "output": "assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/author-reference/src/assets/",
+                "output": "assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/dark-mode/src/assets/",
+                "output": "assets/"
+              }
             ],
             "styles": ["apps/data-scribbler/src/styles.scss"],
             "scripts": []
@@ -116,6 +206,106 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/data-scribbler-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "distance-slider": {
+      "projectType": "library",
+      "root": "libs/distance-slider",
+      "sourceRoot": "libs/distance-slider/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/distance-slider"],
+          "options": {
+            "jestConfig": "libs/distance-slider/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/distance-slider/src/**/*.ts",
+              "libs/distance-slider/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "logo": {
+      "projectType": "library",
+      "root": "libs/logo",
+      "sourceRoot": "libs/logo/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/logo"],
+          "options": {
+            "jestConfig": "libs/logo/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/logo/src/**/*.ts",
+              "libs/logo/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "scribbling": {
+      "projectType": "library",
+      "root": "libs/scribbling",
+      "sourceRoot": "libs/scribbling/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/scribbling"],
+          "options": {
+            "jestConfig": "libs/scribbling/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/scribbling/src/**/*.ts",
+              "libs/scribbling/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared": {
+      "projectType": "library",
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "prefix": "jdrks",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared"],
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/src/**/*.ts",
+              "libs/shared/src/**/*.html"
+            ]
           }
         }
       }

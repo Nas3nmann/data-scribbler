@@ -27,12 +27,33 @@
     ]
   },
   "projects": {
+    "author-reference": {
+      "tags": []
+    },
+    "copy-button": {
+      "tags": []
+    },
+    "dark-mode": {
+      "tags": []
+    },
     "data-scribbler": {
       "tags": []
     },
     "data-scribbler-e2e": {
       "tags": [],
       "implicitDependencies": ["data-scribbler"]
+    },
+    "distance-slider": {
+      "tags": []
+    },
+    "logo": {
+      "tags": []
+    },
+    "scribbling": {
+      "tags": []
+    },
+    "shared": {
+      "tags": []
     }
   }
 }

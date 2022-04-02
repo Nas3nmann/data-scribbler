@@ -1,0 +1,13 @@
+<section class="flex flex-row justify-center align-middle">
+  <img src="assets/lowDensity.svg" class="inline-block w-12 h-12 mx-4" />
+  <input
+    style="direction: rtl"
+    class="accent-primary"
+    [(ngModel)]="distance"
+    type="range"
+    [min]="minValue"
+    [max]="maxValue"
+    [step]="step"
+  />
+  <img src="assets/highDensity.svg" class="inline-block w-12 h-12 mx-4" />
+</section>
